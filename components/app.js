@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Jobsearch from './jobsearch'
 import Charts from './charts'
 
@@ -10,11 +11,14 @@ class App extends Component {
 
   render () {
     return (
-      <div>
-        <h1>Welcome to {this.props.name}</h1>
-        <Jobsearch />
-        <Charts />
-      </div>
+      <MuiThemeProvider>
+        <div>
+          <h1>Welcome to {this.props.name}</h1>
+          <Jobsearch />
+          <Charts />
+        </div>
+      </MuiThemeProvider>
+
     )
   }
 

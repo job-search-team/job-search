@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
+import BarGraph from './BarGraph'
 
 class Charts extends Component {
 
   render () {
-    return <h1>Charts Con</h1>
+    return (
+      <div>
+        <h1>Charts Container</h1>
+        <BarGraph />
+      </div>
+    )
   }
 
 }

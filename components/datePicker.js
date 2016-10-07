@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import DatePicker from 'material-ui/DatePicker'
 
-class DatePicker extends Component {
+const JobDatePicker = () => (
+  <div>
+    <DatePicker hintText="Select a date" />
+  </div>
+)
 
-  render () {
-    return <h1>Date</h1>
-  }
-
-}
-
-export default DatePicker
+export default JobDatePicker
