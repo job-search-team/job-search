@@ -4,3 +4,5 @@ test('testing job-search', function (t) {
   t.ok(true)
   t.end()
 })
+
+test()
