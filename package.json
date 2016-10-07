@@ -6,7 +6,7 @@
   "scripts": {
     "start": "budo . -d --serve bundle.js --live",
     "build": "browserify . -o bundle.js -g uglifyify",
-    "test": "browserify test/index.js | node | tap-spec",
+    "test": "browserify test/index.js | node | tap-spec || true",
     "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
     "push": "gh-pages -d dist",
     "deploy": "npm run build && npm run dist && npm run push"
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/author/job-search",
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "material-ui": "^0.16.0",
     "react-tap-event-plugin": "^1.0.0"
   },
