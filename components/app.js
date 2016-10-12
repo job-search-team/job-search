@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { Match } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import Jobsearch from './jobsearch'
-import Charts from './charts'
+import JobSearch from './JobSearch'
+import Menu from './Menu'
 
 class App extends Component {
 
@@ -11,14 +12,10 @@ class App extends Component {
 
   render () {
     return (
-      <MuiThemeProvider>
-        <div>
-          <h1>Welcome to {this.props.name}</h1>
-          <Jobsearch />
-          <Charts />
-        </div>
-      </MuiThemeProvider>
-
+      <div>
+        <Menu />
+        <Match pattern="/search" component={JobSearch}/>
+      </div>
     )
   }
 
