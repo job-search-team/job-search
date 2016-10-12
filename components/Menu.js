@@ -60,7 +60,7 @@ class Menu extends Component {
         <div className="container">
           <ul className="nav nav-pills nav-justified">
             <li role="presentation" className="active"><Link to="/search">Search</Link></li>
-            <li role="presentation"><a href="./ui-mockup-2.html">Charts</a></li>
+            <li role="presentation"><Link to="/charts">Search</Link></li>
           </ul>
         </div>
       </div>
