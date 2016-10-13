@@ -4,6 +4,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import JobSearch from './JobSearch'
 import Menu from './Menu'
 import Charts from './Charts'
+import ChartsSideBar from './ChartsSideBar'
+import ChartsContent from './ChartsContent'
 
 class App extends Component {
 
@@ -16,7 +18,17 @@ class App extends Component {
       <div>
         <Menu />
         <Match pattern="/search" component={JobSearch}/>
-        <Match pattern="/charts" component={Charts}/>
+        <Match pattern="/charts" component={Charts}>
+          {({router}) => {
+            return (
+              <div>
+                <ChartsSideBar />
+                <ChartsContent />
+              </div>
+            )
+          }}
+
+        </Match>
       </div>
     )
   }

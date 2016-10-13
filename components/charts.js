@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import BarGraph from './BarGraph'
 
 class Charts extends Component {
 
   render () {
     return (
-      <div>
-        <h1>Charts Container</h1>
+      <div className="container" style={{paddingTop:'30px'}}>
+        <div className="row">
+
+        </div>
       </div>
     )
   }
